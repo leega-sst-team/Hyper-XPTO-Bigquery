@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: tru_catg_prod
+    description: "Modelo que transforma dados da tabela raw_catg_prod em tru_catg_prod."
+    columns:
+      - name: cd_catg_prod
+        description: "Código da categoria de produto" 
+        tests:
+          - unique
+          - not_null
+      - name: nm_catg_prod
+        description: "Nome da categoria de produto"
+        tests:
+          - unique
+          - not_null
+      - name: dt_incl
+        description: data de inclusão
+        tests:
+          - not_null
+      - name: cd_user_atlz
+        description: codigo do usuario atualização
+      - name: dt_atlz
+        description: Data da ultima atualização
+                 

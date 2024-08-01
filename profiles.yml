@@ -1,0 +1,13 @@
+hyper_xpto:
+  outputs:
+    dev:
+      dataset: dbt_hyper_xpto
+      keyfile: C:\Users\Gus\.dbt\leega-poc-delivery-inovacao-a00839b31c2f.json
+      location: US
+      method: service-account
+      priority: interactive
+      project: leega-poc-delivery-inovacao
+      threads: 1
+      timeout_seconds: 300
+      type: bigquery
+  target: dev

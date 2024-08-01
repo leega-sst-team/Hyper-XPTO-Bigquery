@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: tru_cidd
+    description: "Modelo que transforma dados da tabela raw_cidd em tru_cidd."
+    columns:
+      - name: cd_cidd
+        description: "Código da cidade" 
+        tests:
+          - unique
+          - not_null
+      - name: cd_estd
+        description: "Codigo do estado"
+        tests:          
+          - not_null
+      - name: nm_cidd
+        description: "Nome da Cidade"
+        tests:
+          - not_null
+      - name: dc_cep_min
+        description: "CEP minimo da cidade"
+      - name: dc_cep_max
+        description: "CEP máximo da cidade"
+      - name: dt_incl
+        description: data de inclusão
+        tests:
+          - not_null
+      - name: cd_user_atlz
+        description: codigo do usuario atualização
+      - name: dt_atlz
+        description: Data da ultima atualização
+                 

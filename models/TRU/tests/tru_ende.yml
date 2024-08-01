@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: tru_ende
+    description: "Modelo que transforma dados da tabela raw_ende em tru_ende."
+    columns:
+      - name: cd_ende
+        description: "Código da cidade" 
+        tests:
+          - unique
+          - not_null
+      - name: nm_logr
+        description: "Nome do logadouro"
+        tests:          
+          - not_null
+      - name: nr_cep_logr
+        description: "Numero do CEP"
+        tests:
+          - not_null
+      - name: cd_cidd
+        description: "Codigo da Cidade"
+      - name: cd_estd
+        description: "Codigo do Estado"
+      - name: dt_incl
+        description: data de inclusão
+        tests:
+          - not_null
+      - name: cd_user_atlz
+        description: codigo do usuario atualização
+      - name: dt_atlz
+        description: Data da ultima atualização
+                 

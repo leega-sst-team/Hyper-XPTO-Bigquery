@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: tru_cent_dstr_subp
+    description: "Modelo que transforma dados da tabela raw_catg_prod_subp em tru_catg_prod_subp."
+    columns:
+      - name: cd_cent_dstr
+        description: "Código do centro de distribuição" 
+        tests:          
+          - not_null
+      - name: cd_subp
+        description: "id de subp"
+        tests:
+          - unique
+          - not_null
+      - name: qt_item
+        description: "Quantidade de item"
+        tests:          
+          - not_null
+      - name: preco_minimo_item
+        description: "preco minimo do item"
+        tests:          
+          - not_null
+      - name: dt_incl
+        description: data de inclusão
+        tests:
+          - not_null
+      - name: cd_user_atlz
+        description: codigo do usuario atualização
+      - name: dt_atlz
+        description: Data da ultima atualização
+                 

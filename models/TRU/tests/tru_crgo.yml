@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: tru_crgo
+    description: "Modelo que transforma dados da tabela raw_crgo em tru_crgo."
+    columns:
+      - name: cd_crgo
+        description: "Código do cargo" 
+        tests:
+          - unique
+          - not_null
+      - name: nm_crgo
+        description: "Nome do cargo"
+        tests:
+          - unique
+          - not_null
+      - name: qt_maxi_func
+        description: "Quantidade máxima de funcionarios"
+        tests:          
+          - not_null
+      - name: vl_salr
+        description: "Valor do salário"
+        tests:          
+          - not_null
+      - name: dt_incl
+        description: data de inclusão
+        tests:
+          - not_null
+      - name: cd_user_atlz
+        description: codigo do usuario atualização
+      - name: dt_atlz
+        description: Data da ultima atualização
+                 

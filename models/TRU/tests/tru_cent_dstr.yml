@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: tru_cent_dstr
+    description: "Modelo que transforma dados da tabela raw_catg_prod em tru_catg_prod."
+    columns:
+      - name: cd_cent_dstr
+        description: "Código do centro de distribuição" 
+        tests:
+          - unique
+          - not_null
+      - name: nm_cent_dstr
+        description: "Nome do centro de distribuição"
+        tests:
+          - unique
+          - not_null
+      - name: cd_ende
+        description: "Codigo de endereço"
+        tests:          
+          - not_null
+      - name: nr_estb
+        description: "Numero do estabelecimento"
+        tests:          
+          - not_null
+      - name: dt_incl
+        description: data de inclusão
+        tests:
+          - not_null
+      - name: cd_user_atlz
+        description: codigo do usuario atualização
+      - name: dt_atlz
+        description: Data da ultima atualização
+                 

@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: dbt_hyper_xpto
+    database: leega-poc-delivery-inovacao
+    schema: dbt_hyper_xpto
+    tables:
+      - name: raw_loja
+      - name: raw_catg_prod
+      - name: raw_cent_dstr
+      - name: raw_cent_dstr_subp
+      - name: raw_cidd
+      - name: raw_crgo
+      - name: raw_dpto
+      - name: raw_ende
+      - name: raw_engn_prmt

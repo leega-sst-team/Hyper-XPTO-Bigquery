@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: tru_engn_prmt
+    description: "Modelo que transforma dados da tabela raw_ende em tru_ende."
+    columns:
+      - name: cd_prmt
+        description: "Código do percentual" 
+        tests:         
+          - not_null
+      - name: nm_prmt
+        description: "Nome do percentual"
+        tests:          
+          - not_null
+      - name: nm_list_prmt
+        description: "Nome da lista percentual"
+        tests:
+          - not_null
+      - name: dc_prmt_list
+        description: "Horario do percentual"
+      - name: tp_data_type_dscr
+        description: "Data type"
+      - name: dt_incl
+        description: data de inclusão
+        tests:
+          - not_null
+      - name: cd_user_atlz
+        description: codigo do usuario atualização
+      - name: dt_atlz
+        description: Data da ultima atualização
+                 

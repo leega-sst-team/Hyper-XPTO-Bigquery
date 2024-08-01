@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: tru_dpto
+    description: "Modelo que transforma dados da tabela raw_dpto em tru_dpto."
+    columns:
+      - name: cd_dpto
+        description: "Código do departamento" 
+        tests:
+          - unique
+          - not_null
+      - name: nm_dpto
+        description: "Nome do departamento"
+        tests:
+          - unique
+          - not_null
+      - name: qt_maxi_func
+        description: "Quantidade máxima de funcionarios"
+        tests:          
+          - not_null
+      - name: dt_incl
+        description: data de inclusão
+        tests:
+          - not_null
+      - name: cd_user_atlz
+        description: codigo do usuario atualização
+      - name: dt_atlz
+        description: Data da ultima atualização
+                 

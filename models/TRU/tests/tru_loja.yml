@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: tru_loja
+    description: "Modelo que transforma dados da tabela raw_loja em tru_loja."
+    columns:
+      - name: cd_loja
+        description: "Código da loja" 
+        tests:
+          - unique
+          - not_null
+      - name: nome_fantasia
+        description: "Nome fantasia da loja"
+        tests:
+          - not_null
+      - name: cd_loja_mae
+        description: codigo da loja mae
+        tests:
+          - not_null
+      - name: cd_ende
+        description: codigo do endereço
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "> 0"
+      - name: nr_estb
+        description: numero de estabelecimento
+        tests:
+          - not_null
+      - name: cidade
+        description: Cidade da loja
+        tests:
+          - not_null
+      - name: estado
+        description: Estado da cidade
+        tests:
+          - not_null
+      - name: dt_incl
+        description: data de inclusão
+        tests:
+          - not_null
+      - name: cd_user_atlz
+        description: codigo do usuario atualização
+      - name: dt_atlz
+        description: Data da ultima atualização
